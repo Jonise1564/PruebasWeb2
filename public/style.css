@@ -1,0 +1,4 @@
+tr.inactivo {
+    color: red;
+    text-decoration: line-through;
+}
