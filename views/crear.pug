@@ -1,0 +1,9 @@
+extends ../layout 
+block contenido 
+   form(action="/medicos" method="post")
+        input(name="nombre",type="text", placeholder="Ingrese un nombre" )
+        br
+        input(type="email", name="mail", placeholder="Juan.perez@mail.com" required)
+        input(type="submit" value="Agregar" required)     
+            
+   

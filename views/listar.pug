@@ -1,0 +1,21 @@
+extends ../layout 
+block contenido
+    a(href="/medicos/create" class="btn btn-success" ) Agregar Medico
+    table(class = "table table-striped")
+            thead
+                tr
+                    th Id 
+                    th Nombre
+                    th Mail
+                    th Activo
+            tbody 
+                each medico in medicos
+                    tr(class=(medico.estado==1)?'activo' : 'inactivo' )
+                        td #{medico.id} 
+                        td #{medico.nombre} 
+                        td #{medico.mail}
+                        td #{(medico.estado==1)? 'Activo': 'Inactivo'}
+                        td  
+                            a(href="medicos/editar" class="btn btn-info") Editar
+                            a(href="medicos/borrar" class="btn btn-danger") Borrar    
+                                    
